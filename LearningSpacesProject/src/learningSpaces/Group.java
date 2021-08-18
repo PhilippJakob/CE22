@@ -20,7 +20,8 @@ public class Group
 	public int getId() {
 		return id;
 	}
-	public void setId(int pId) {
+	public void setId(int pId) 
+	{
 		id = pId;
 	}
 	public String getType() {
