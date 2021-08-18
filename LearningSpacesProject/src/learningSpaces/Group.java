@@ -9,14 +9,16 @@ package learningSpaces;
  */
 public class Group 
 {
-	private int id=0;
+	private int id = 0;
 	private String type;
-	private int owner =0;
+	private int owner = 0;
 	private String name;
 	private String subejct;
 	private String additionalInfo;
 	private String additionalData;
-	//get/set
+	
+	
+	//~~~ Getters & Setters ~~~ 
 	public int getId() {
 		return id;
 	}
