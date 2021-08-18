@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="371.0" prefWidth="217.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="tfUsername" layoutX="35.0" layoutY="71.0" promptText="Username" />
+      <TextField fx:id="tfLastName" layoutX="35.0" layoutY="139.0" prefHeight="26.0" prefWidth="150.0" promptText="Last Name" />
+      <ComboBox fx:id="cbClass" layoutX="34.0" layoutY="180.0" prefWidth="150.0" promptText="Class" />
+      <PasswordField fx:id="pfPassword" layoutX="35.0" layoutY="225.0" promptText="Password" />
+      <PasswordField fx:id="pfRepeatPassword" layoutX="35.0" layoutY="268.0" promptText="Repeat Password" />
+      <TextField alignment="CENTER" layoutX="34.0" layoutY="14.0" prefHeight="45.0" prefWidth="149.0" style="-fx-border: none; -fx-background-color: rgba(0,0,0,0);" text="REGISTER">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <Button layoutX="70.0" layoutY="313.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="80.0" text="Register">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <TextField fx:id="tfFirstName" layoutX="35.0" layoutY="113.0" prefHeight="26.0" prefWidth="150.0" promptText="First Name" />
+   </children>
+</AnchorPane>
