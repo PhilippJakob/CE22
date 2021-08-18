@@ -4,7 +4,7 @@
 package learningSpaces;
 
 /**
- * @author jimmy
+ * @author jimmy 
  *
  */
 public class Group 
