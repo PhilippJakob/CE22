@@ -17,10 +17,4 @@ public class Account
 	  //get all information related from the database by id
    }
 
-   private void enterIntoDB(int pId, String pType, int pOwner, String pName)
-   {
-	  // TODO Auto-generated method stub
-	  
-   }
-
 }
