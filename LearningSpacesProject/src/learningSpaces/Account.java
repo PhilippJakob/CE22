@@ -10,13 +10,11 @@ public class Account
    private String addionalInfo;
    private String additonalData;
    
-   Account(int pId, String pType, int pOwner, String pName){
+   Account(int pId){
 	  id = pId;
-	  type = pType;
-	  owner = pOwner;
-	  name = pName;
 	  
-	  enterIntoDB(id,type,owner,name);
+	  //getInfoFromDB(id);
+	  //get all information related from the database by id
    }
 
    private void enterIntoDB(int pId, String pType, int pOwner, String pName)
