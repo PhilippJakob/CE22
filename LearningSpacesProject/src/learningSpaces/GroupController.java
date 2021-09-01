@@ -34,7 +34,7 @@ public class GroupController {
 
     @FXML
     void confirm(ActionEvent event) {
-
+ 
     }
 
     @FXML
