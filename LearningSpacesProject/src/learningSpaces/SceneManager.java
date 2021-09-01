@@ -29,12 +29,7 @@ public class SceneManager
 	  
 	  try {
       	  EnumSet.allOf(SceneState.class).forEach(sceneName -> {
-      		 switch (sceneName) {
-      			case HOME: lScenes.put(sceneName,  new Scene((AnchorPane)FXMLLoader.load(getClass().getResource(sceneName.getFileName())),400,400).getStylesheets().add(getClass().getResource("application.css").toExternalForm()));
-      			   break;
-      			case OTHER: lScenes.put(sceneName,  new Scene((AnchorPane)FXMLLoader.load(getClass().getResource(sceneName.getFileName())),400,400).getStylesheets().add(getClass().getResource("application.css").toExternalForm()));
-      			   break;
-      		 }
+      		 lScenes.put(sceneName,  new Scene((AnchorPane)FXMLLoader.load(getClass().getResource(sceneName.getFileName())),400,400).getStylesheets().add(getClass().getResource("application.css").toExternalForm()));
       	  });
 	  }
 	  catch(Exception e) {
