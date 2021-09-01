@@ -5,39 +5,41 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?> 
-
-
-<AnchorPane prefHeight="519.0" prefWidth="417.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="learningSpaces.GroupController">
+<?import javafx.scene.text.Font?>
+ 
+<AnchorPane prefHeight="196.0" prefWidth="427.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="learningSpaces.GroupController">
    <children>
-      <AnchorPane prefHeight="513.0" prefWidth="449.0">
+      <AnchorPane prefHeight="458.0" prefWidth="427.0">
          <children>
-            <Label alignment="CENTER" layoutX="132.0" layoutY="27.0" prefHeight="58.0" prefWidth="195.0" text="Group" textAlignment="CENTER">
+            <Label alignment="CENTER" layoutX="116.0" layoutY="8.0" prefHeight="58.0" prefWidth="195.0" text="Group" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="36.0" />
                </font>
             </Label>
-            <TextField fx:id="tfName" layoutX="77.0" layoutY="117.0" prefHeight="39.0" prefWidth="305.0" promptText="Name">
+            <TextField fx:id="tfName" layoutX="25.0" layoutY="87.0" prefHeight="39.0" prefWidth="305.0" promptText="Name">
                <font>
                   <Font size="15.0" />
                </font>
             </TextField>
-            <TextField fx:id="tfSubject" layoutX="77.0" layoutY="182.0" prefHeight="39.0" prefWidth="305.0" promptText="Subject">
+            <TextField fx:id="tfSubject" layoutX="25.0" layoutY="152.0" prefHeight="39.0" prefWidth="305.0" promptText="Subject">
                <font>
                   <Font size="15.0" />
                </font>
             </TextField>
-            <TextField fx:id="tfType" layoutX="76.0" layoutY="247.0" prefHeight="39.0" prefWidth="305.0" promptText="Type">
+            <TextField fx:id="tfType" layoutX="24.0" layoutY="217.0" prefHeight="39.0" prefWidth="305.0" promptText="Type">
                <font>
                   <Font size="15.0" />
                </font>
             </TextField>
-            <TextArea fx:id="taAdditionalInfo" layoutX="77.0" layoutY="310.0" prefHeight="102.0" prefWidth="305.0" promptText="Additional Information" wrapText="true">
+            <TextArea fx:id="taAdditionalInfo" layoutX="25.0" layoutY="280.0" prefHeight="102.0" prefWidth="305.0" promptText="Additional Information" wrapText="true">
                <font>
                   <Font size="15.0" />
                </font>
             </TextArea>
-            <Button fx:id="btConfirm" layoutX="187.0" layoutY="447.0" mnemonicParsing="false" onAction="#confirm" prefHeight="39.0" prefWidth="83.0" text="Confirm" />
+            <Button fx:id="btConfirm" layoutX="25.0" layoutY="401.0" mnemonicParsing="false" onAction="#confirm" prefHeight="39.0" prefWidth="124.0" text="Confirm" />
+            <Button fx:id="btSearch" layoutX="340.0" layoutY="87.0" mnemonicParsing="false" onAction="#search" prefHeight="39.0" prefWidth="62.0" text="Search" />
+            <Button fx:id="btUpdate" layoutX="152.0" layoutY="401.0" mnemonicParsing="false" onAction="#update" prefHeight="39.0" prefWidth="124.0" text="Update" />
+            <Button fx:id="btDelete" layoutX="279.0" layoutY="401.0" mnemonicParsing="false" onAction="#delete" prefHeight="39.0" prefWidth="124.0" text="Delete" />
          </children>
       </AnchorPane>
    </children>

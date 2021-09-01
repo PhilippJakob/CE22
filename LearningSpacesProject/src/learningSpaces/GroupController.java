@@ -16,7 +16,7 @@ public class GroupController {
 
     @FXML
     private TextField tfType;
- 
+
     @FXML
     private TextArea taAdditionalInfo;
 
@@ -24,14 +24,31 @@ public class GroupController {
     private Button btConfirm;
 
     @FXML
-    void confirm(ActionEvent event) {    	
-    	if(btConfirm.isPressed())
-    	{
-    	tfName.getText();
-    	tfSubject.getText();
-    	tfType.getText();
-    	taAdditionalInfo.getText();
-    	}
+    private Button btSearch;
+
+    @FXML
+    private Button btUpdate;
+
+    @FXML
+    private Button btDelete;
+
+    @FXML
+    void confirm(ActionEvent event) {
+
+    }
+
+    @FXML
+    void delete(ActionEvent event) {
+
+    }
+
+    @FXML
+    void search(ActionEvent event) {
+
+    }
+
+    @FXML
+    void update(ActionEvent event) {
 
     }
 
