@@ -1,10 +1,12 @@
 package learningSpaces;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;  
+import javafx.scene.control.TextField;
+import javafx.event.*;
 
-public class GroupController {
+public class GroupController { 
 
     @FXML
     private TextField tfName;
@@ -17,5 +19,13 @@ public class GroupController {
 
     @FXML
     private TextArea taAdditionalInfo;
+
+    @FXML
+    private Button btConfirm;
+
+    @FXML
+    void confirm(ActionEvent event) {
+
+    }
 
 }
