@@ -1,10 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `learningspaces` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `learningspaces`;
--- MySQL dump 10.13  Distrib 8.0.21, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.24, for Win64 (x86_64)
 --
--- Host: localhost    Database: learningspaces
+-- Host: 127.0.0.1    Database: learningspaces
 -- ------------------------------------------------------
--- Server version	8.0.21
+-- Server version	8.0.25
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -16,36 +14,6 @@ USE `learningspaces`;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
---
--- Table structure for table `a-g`
---
-
-DROP TABLE IF EXISTS `a-g`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `a-g` (
-  `id` int unsigned NOT NULL,
-  `userID` int unsigned NOT NULL,
-  `groupID` int unsigned NOT NULL,
-  `isMod` varchar(45) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id_UNIQUE` (`id`),
-  KEY `user_idx` (`userID`),
-  KEY `group_idx` (`groupID`),
-  CONSTRAINT `group` FOREIGN KEY (`groupID`) REFERENCES `group` (`id`),
-  CONSTRAINT `user` FOREIGN KEY (`userID`) REFERENCES `account` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `a-g`
---
-
-LOCK TABLES `a-g` WRITE;
-/*!40000 ALTER TABLE `a-g` DISABLE KEYS */;
-/*!40000 ALTER TABLE `a-g` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `account`
@@ -76,6 +44,69 @@ CREATE TABLE `account` (
 LOCK TABLES `account` WRITE;
 /*!40000 ALTER TABLE `account` DISABLE KEYS */;
 /*!40000 ALTER TABLE `account` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `account-group`
+--
+
+DROP TABLE IF EXISTS `account-group`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `account-group` (
+  `id` int unsigned NOT NULL,
+  `userID` int unsigned NOT NULL,
+  `groupID` int unsigned NOT NULL,
+  `isMod` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`),
+  KEY `user_idx` (`userID`),
+  KEY `group_idx` (`groupID`),
+  CONSTRAINT `group` FOREIGN KEY (`groupID`) REFERENCES `group` (`id`),
+  CONSTRAINT `user` FOREIGN KEY (`userID`) REFERENCES `account` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `account-group`
+--
+
+LOCK TABLES `account-group` WRITE;
+/*!40000 ALTER TABLE `account-group` DISABLE KEYS */;
+/*!40000 ALTER TABLE `account-group` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `booking`
+--
+
+DROP TABLE IF EXISTS `booking`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `booking` (
+  `room` int NOT NULL,
+  `userID` int unsigned NOT NULL,
+  `groupID` int unsigned NOT NULL,
+  `account-group` int unsigned NOT NULL,
+  PRIMARY KEY (`room`),
+  UNIQUE KEY `room_UNIQUE` (`room`),
+  KEY `user_idx` (`userID`),
+  KEY `groupID_idx` (`groupID`),
+  KEY `account-group_idx` (`account-group`),
+  CONSTRAINT `account-group` FOREIGN KEY (`account-group`) REFERENCES `account-group` (`id`),
+  CONSTRAINT `groupID` FOREIGN KEY (`groupID`) REFERENCES `group` (`id`),
+  CONSTRAINT `room` FOREIGN KEY (`room`) REFERENCES `room` (`ID`),
+  CONSTRAINT `userID` FOREIGN KEY (`userID`) REFERENCES `account` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `booking`
+--
+
+LOCK TABLES `booking` WRITE;
+/*!40000 ALTER TABLE `booking` DISABLE KEYS */;
+/*!40000 ALTER TABLE `booking` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -143,4 +174,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-08-18 10:34:14
+-- Dump completed on 2021-09-01  8:21:00
