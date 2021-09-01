@@ -7,7 +7,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.fxml.FXMLLoader;
 
 public class Main extends Application {
-   SceneManager sceneManager;
+   private static SceneManager sceneManager;
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -22,6 +22,10 @@ public class Main extends Application {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public static SceneManager getSceneManager() {
+	   return sceneManager;
 	}
 	
 	public static void main(String[] args) {
