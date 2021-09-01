@@ -16,7 +16,7 @@ public class GroupController {
 
     @FXML
     private TextField tfType;
- 
+
     @FXML
     private TextArea taAdditionalInfo;
 
