@@ -6,16 +6,19 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.fxml.FXMLLoader;
 
-
 public class Main extends Application {
+   SceneManager sceneManager;
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("LSView.fxml"));
-			Scene scene = new Scene(root,400,400);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setScene(scene);
-			primaryStage.show();
+//			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("LSView.fxml"));
+//			Scene scene = new Scene(root,400,400);
+//			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+//			primaryStage.setScene(scene);
+//			primaryStage.show();
+		  
+		   	sceneManager = new SceneManager(primaryStage);
+		   	
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
