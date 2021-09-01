@@ -2,8 +2,10 @@ package learningSpaces;
 
 public enum SceneState
 {
-   HOME("LSView.fxml",400,400),
-   OTHER("[FILENAMEFORTHISSTATE].fxml",400,400);
+   HOME("LSView.fxml",400,400);
+   
+   
+   //EXAMPLE: OTHER("[FILENAMEFORTHISSTATE].fxml",400,400)
    
    private String fxmlFileName;
    private int sceneWidth, sceneHeight;
