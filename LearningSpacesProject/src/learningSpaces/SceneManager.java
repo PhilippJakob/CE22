@@ -27,14 +27,14 @@ public class SceneManager
    {
 	  HashMap<SceneState, Scene> lScenes = new HashMap<SceneState, Scene>();
 	  
-	  try {
       	  EnumSet.allOf(SceneState.class).forEach(sceneName -> {
-      		 lScenes.put(sceneName,  new Scene((AnchorPane)FXMLLoader.load(getClass().getResource(sceneName.getFileName())),400,400).getStylesheets().add(getClass().getResource("application.css").toExternalForm()));
+      		try {
+      		 lScenes.put(sceneName,  new Scene((AnchorPane)FXMLLoader.load(getClass().getResource(sceneName.getFileName())),sceneName.getSceneWidth(),sceneName.getSceneHeight()));
+      		}
+      		catch(Exception e) {
+      			e.printStackTrace();
+      		}
       	  });
-	  }
-	  catch(Exception e) {
-			e.printStackTrace();
-		}
 	  
 	  return lScenes;
    }
