@@ -29,7 +29,7 @@ public class SceneManager
 	  
       	  EnumSet.allOf(SceneState.class).forEach(sceneName -> {
       		try {
-      		 lScenes.put(sceneName,  new Scene((AnchorPane)FXMLLoader.load(getClass().getResource(sceneName.getFileName())),sceneName.getSceneWidth(),sceneName.getSceneHeight()));
+      		   lScenes.put(sceneName,  new Scene((AnchorPane)FXMLLoader.load(getClass().getResource(sceneName.getFileName())),sceneName.getSceneWidth(),sceneName.getSceneHeight()));
       		}
       		catch(Exception e) {
       			e.printStackTrace();
