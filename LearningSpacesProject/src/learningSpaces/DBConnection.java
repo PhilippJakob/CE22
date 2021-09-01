@@ -31,12 +31,12 @@ public boolean connect()
 
 
 //get und set
-public static Connection holenConnection()
+public static Connection getConnection()
 {
 	return connection;
 }
 
-public void setzenConnection(Connection pConnection)
+public void setConnection(Connection pConnection)
 {
 	connection = pConnection;
 }
