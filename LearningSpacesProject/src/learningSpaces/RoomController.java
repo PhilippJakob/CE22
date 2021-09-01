@@ -1,6 +1,7 @@
 package learningSpaces;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
@@ -28,5 +29,8 @@ public class RoomController {
 
     @FXML
     private TextField tfRommID;
+    
+    @FXML
+    private Button btSubmit;
 	
 }
