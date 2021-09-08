@@ -84,18 +84,17 @@ DROP TABLE IF EXISTS `booking`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `booking` (
-  `room` int NOT NULL,
+  `booking` int unsigned NOT NULL,
   `userID` int unsigned NOT NULL,
   `groupID` int unsigned NOT NULL,
-  `account-group` int unsigned NOT NULL,
-  PRIMARY KEY (`room`),
-  UNIQUE KEY `room_UNIQUE` (`room`),
+  `roomID` int unsigned NOT NULL,
+  `time` datetime NOT NULL,
+  UNIQUE KEY `booking_UNIQUE` (`booking`),
   KEY `user_idx` (`userID`),
   KEY `groupID_idx` (`groupID`),
-  KEY `account-group_idx` (`account-group`),
-  CONSTRAINT `account-group` FOREIGN KEY (`account-group`) REFERENCES `account-group` (`id`),
+  KEY `roomID_idx` (`roomID`),
   CONSTRAINT `groupID` FOREIGN KEY (`groupID`) REFERENCES `group` (`id`),
-  CONSTRAINT `room` FOREIGN KEY (`room`) REFERENCES `room` (`ID`),
+  CONSTRAINT `roomID` FOREIGN KEY (`roomID`) REFERENCES `room` (`ID`),
   CONSTRAINT `userID` FOREIGN KEY (`userID`) REFERENCES `account` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -149,7 +148,7 @@ DROP TABLE IF EXISTS `room`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `room` (
-  `ID` int NOT NULL,
+  `ID` int unsigned NOT NULL,
   `RoomNr` varchar(45) DEFAULT NULL,
   `AdditionalInfo` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`ID`)
@@ -174,4 +173,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-09-01  8:21:00
+-- Dump completed on 2021-09-08 12:05:20
