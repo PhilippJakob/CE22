@@ -10,19 +10,22 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TableView fx:id="tvRooms" layoutX="29.0" layoutY="210.0" prefHeight="250.0" prefWidth="434.0">
+      <TableView fx:id="tvRooms" layoutX="28.0" layoutY="174.0" prefHeight="250.0" prefWidth="434.0">
         <columns>
           <TableColumn fx:id="tcRoomID" prefWidth="75.0" text="Room ID" />
           <TableColumn fx:id="tcRoomName" prefWidth="89.60003662109375" text="Room Number" />
             <TableColumn fx:id="tcAdditionalInfo" prefWidth="268.79998779296875" text="Additional Info" />
         </columns>
       </TableView>
-      <TextArea fx:id="taAdditionalInfo" layoutX="493.0" layoutY="335.0" prefHeight="100.0" prefWidth="200.0" promptText="Additional Info" />
-      <TextField fx:id="tfRoomNumber" layoutX="493.0" layoutY="282.0" prefHeight="26.0" prefWidth="200.0" promptText="Room Number" />
-      <TextField fx:id="tfRommID" layoutX="493.0" layoutY="230.0" prefHeight="26.0" prefWidth="200.0" promptText="Room ID" />
-      <Button fx:id="btSubmit" layoutX="543.0" layoutY="447.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="100.0" text="Submit" />
-      <Label layoutX="493.0" layoutY="210.0" text="Room ID" />
-      <Label layoutX="493.0" layoutY="264.0" text="Room Number" />
-      <Label layoutX="493.0" layoutY="317.0" text="Additional Info" />
+      <TextArea fx:id="taAdditionalInfo" layoutX="492.0" layoutY="299.0" prefHeight="100.0" prefWidth="200.0" promptText="Additional Info" />
+      <TextField fx:id="tfRoomNumber" layoutX="492.0" layoutY="246.0" prefHeight="26.0" prefWidth="200.0" promptText="Room Number" />
+      <TextField fx:id="tfRoomID" layoutX="492.0" layoutY="194.0" prefHeight="26.0" prefWidth="200.0" promptText="Room ID" />
+      <TextField fx:id="tfSearchID" layoutX="28.0" layoutY="130.0" prefHeight="26.0" prefWidth="170.0" promptText="Search ID" />
+      <Label layoutX="492.0" layoutY="174.0" text="Room ID" />
+      <Label layoutX="492.0" layoutY="228.0" text="Room Number" />
+      <Label layoutX="492.0" layoutY="281.0" text="Additional Info" />
+      <Button fx:id="btDelete" layoutX="605.0" layoutY="411.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="86.0" text="Delete Entry" />
+      <Button fx:id="btSubmit" layoutX="493.0" layoutY="411.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="105.0" text="Submit" />
+      <Button fx:id="btSearch" layoutX="219.0" layoutY="130.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="52.0" text="Search" />
    </children>
 </AnchorPane>

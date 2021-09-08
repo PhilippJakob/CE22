@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Room
 {
-   private int	  id;
+private int	  id;
    private String name;
    private String additionalInfo;
    private static Connection conn;// = DBConnection.getConnection();
@@ -28,7 +28,7 @@ public class Room
    
    
  //method to connect to database returns all entries in the room table learningspaces db as a ArrayList
-   public static ArrayList<Room> readDB(Connection pConnection)
+   public static ArrayList<Room> readDB()
    {
 	 conn = DBConnection.getConnection();
 	 Room lSingleRoomData;
@@ -55,7 +55,7 @@ public class Room
      return lRoomData;
    }
 
-   public void create(int pId, String pName, String pAdditionalInfo) {
+   public void insert(int pId, String pName, String pAdditionalInfo) {
 	  try {
 	  conn = DBConnection.getConnection();
 	  PreparedStatement lStatement = conn.prepareStatement("INSERT INTO learningspaces.room VALUES ('"+Integer.toString(pId)+"','"+pName+"','"+pAdditionalInfo+"');");
