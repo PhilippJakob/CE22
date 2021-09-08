@@ -53,7 +53,7 @@ public class RoomController {
     @FXML
     private void update(ActionEvent event)
     {    	    
-    	    room.setKiteDataAL(Room.readDB(DBConnection.getConnection()));
+    	    room.setKiteDataAL(Room.readDB());
     	  	tvKiteData.getItems().clear();
     	  	kiteDataOL.clear();
     	  	kiteDataOL.addAll(kiteList.getKiteDataAL());
@@ -72,7 +72,7 @@ public class RoomController {
     	if (DBConnection.connect()== false)
     	{return;}
 	
-    	putIntoOL(Room.readDB(DBConnection.getConnection()));
+    	putIntoOL(Room.readDB());
     	
     	tcRoomID.setCellValueFactory(new PropertyValueFactory<Room,Integer>("ID"));
     	tcRoomName.setCellValueFactory(new PropertyValueFactory<Room,String>("RoomNrID"));
